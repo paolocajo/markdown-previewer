@@ -39,22 +39,10 @@ p {
   color: hsl(209, 34%, 30%);
 }
 
-.section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-
-@media screen and (min-width: 992px) {
-  .section {
-    width: 95vw;
-  }
-}
-
 .markdown {
   padding: 4rem;
   display: grid;
-  row-gap: 4rem;
+  gap: 4rem;
   overflow: hidden;
 }
 textarea {
@@ -85,13 +73,6 @@ textarea:focus {
   overflow: auto;
 }
 
-@media screen and (min-width: 992px) {
-  .markdown {
-    min-height: 83.3333vh;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4rem;
-  }
-}
 /* unique styles */
 img {
   width: 200px;
@@ -132,4 +113,18 @@ td {
 
 table tr:nth-child(2n) {
   background: #f6f8fa;
+}
+
+@media screen and (min-width: 992px) {
+  .markdown {
+    min-height: 83.3333vh;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .markdown {
+    padding: 2rem;
+    gap: 2rem;
+  }
 }
