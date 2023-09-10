@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
 
 function App() {
   const [markdown, setMarkdown] = useState("# Markdown Preview");
@@ -14,7 +15,7 @@ function App() {
           onChange={(e) => setMarkdown(e.target.value)}
         ></textarea>
         <article id="preview" className="result">
-          <ReactMarkdown>{markdown}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[gfm]}>{markdown}</ReactMarkdown>
         </article>
       </div>
     </main>
