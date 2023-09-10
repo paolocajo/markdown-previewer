@@ -45,11 +45,24 @@ p {
   gap: 4rem;
   overflow: hidden;
 }
+.editor-container {
+  position: relative;
+}
+.btn-delete {
+  position: absolute;
+  top: 2.5%;
+  right: 2.5%;
+}
 textarea {
   resize: vertical;
+  flex-grow: 1;
 }
 textarea:focus {
   outline: none;
+}
+.editor-container {
+  display: flex;
+  flex-direction: column;
 }
 .input {
   border-color: transparent;
@@ -119,7 +132,7 @@ table tr:nth-child(2n) {
   .markdown {
     min-height: 83.3333vh;
     grid-template-columns: 1fr 1fr;
-    column-gap: 4rem;
+    gap: 4rem;
   }
 }
 @media screen and (max-width: 600px) {
