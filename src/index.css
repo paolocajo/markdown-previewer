@@ -53,6 +53,11 @@ p {
   top: 2.5%;
   right: 2.5%;
 }
+.btn-copy {
+  position: absolute;
+  bottom: 2.5%;
+  right: 2.5%;
+}
 textarea {
   resize: vertical;
   flex-grow: 1;
