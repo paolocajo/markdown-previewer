@@ -85,6 +85,20 @@ textarea:focus {
   min-height: 30vh;
   overflow: auto;
 }
+button {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+button:hover {
+  transform: scale(1.1);
+}
+button img {
+  width: 30px;
+  height: auto;
+}
 
 /* unique styles */
 img {

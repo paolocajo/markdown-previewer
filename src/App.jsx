@@ -1,9 +1,11 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
+import deletePNG from "./assets/delete.png";
 
 function App() {
-  const defaultMarkdown = "# Markdown Preview";
+  const defaultMarkdown = `# Markdown Preview
+You can see the Markdown guide [here](https://www.markdownguide.org/cheat-sheet/)`;
   const [markdown, setMarkdown] = useState(defaultMarkdown);
   return (
     <main>
@@ -19,10 +21,10 @@ function App() {
           <button
             className="btn-delete"
             onClick={() => {
-              setMarkdown(defaultMarkdown);
+              setMarkdown("");
             }}
           >
-            Delete
+            <img src={deletePNG} alt="delete-button" />
           </button>
         </div>
         <article id="preview" className="result">
